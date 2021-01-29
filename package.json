@@ -1,0 +1,17 @@
+{
+  "name": "tour-practice-project",
+  "version": "1.0.0",
+  "description": "Landing page of tour",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss tour.css -w"
+  },
+  "author": "Hamza Afridi",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,0 +1,38 @@
+.imgs {
+  position: relative;
+
+  &-width {
+    width: 55%;
+
+    position: absolute;
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
+    transition: all 0.2s;
+
+    &-p1 {
+      top: -2rem;
+      left: 0rem;
+      z-index: 1;
+    }
+    &-p2 {
+      top: 2rem;
+      right: 0rem;
+      z-index: 1;
+    }
+    &-p3 {
+      top: 10rem;
+      left: 18%;
+      z-index: 1;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2rem 4rem rgba($color-black, 0.5);
+
+      z-index: 2;
+    }
+  }
+  &:hover &-width:not(:hover) {
+    transform: scale(0.95);
+  }
+}

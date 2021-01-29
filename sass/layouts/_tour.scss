@@ -1,0 +1,160 @@
+.tour-3-colums {
+  height: 40rem;
+  max-width: $grid-max-width;
+  //   background-color: $color-grey;
+  margin: 0 auto;
+  color: $color-dark-grey;
+  @include clearfix;
+  //   margin-bottom: $grid-gutter-vertical;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gutter-vertical;
+  }
+
+  .tour {
+    width: calc((100% - 2 * (#{$grid-gutter-horizontal})) / 3);
+    transition: all 0.8s;
+
+    // padding: 2.5rem;
+
+    float: left;
+
+    &-box {
+      perspective: 120rem;
+      -moz-perspective: 120rem;
+
+      .card {
+        position: relative;
+        &-side {
+          box-shadow: 0 1.5rem 4rem rgba($color-dark-grey, 0.15);
+          border-radius: 0.5rem;
+          overflow: hidden;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 40rem;
+          background-color: $color-grey;
+          transition: all 1.2s ease;
+          width: 100%;
+          backface-visibility: hidden;
+
+          &--front {
+            height: 50rem;
+            &-background {
+              height: 29rem;
+              background: linear-gradient(
+                  to bottom right,
+                  rgba($color-tour-box-dark, 0.8),
+                  rgba($color-tour-box-light, 0.8)
+                ),
+                url("../img/tour3.jpg");
+              background-size: cover;
+              clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+              background-position: bottom;
+            }
+          }
+          &--front-2 {
+            height: 50rem;
+            &-background {
+              height: 29rem;
+              background: linear-gradient(
+                  to bottom right,
+                  rgba($color-primary-dark, 0.8),
+                  rgba($color-primary-light, 0.8)
+                ),
+                url("../img/tour4.jpg");
+              background-size: cover;
+              clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+              background-position: bottom;
+            }
+          }
+          &--front-3 {
+            height: 50rem;
+            &-background {
+              height: 29rem;
+              background: linear-gradient(
+                  to bottom right,
+                  rgba($color-tour-blue-dark, 0.8),
+                  rgba($color-tour-blue-light, 0.8)
+                ),
+                url("../img/tour1.jpg");
+              background-size: cover;
+              clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+              background-position: bottom;
+            }
+          }
+
+          &--back {
+            position: relative;
+            background: linear-gradient(
+              to bottom right,
+              $color-tour-box-dark,
+              $color-tour-box-light
+            );
+            height: 50rem;
+            transform: rotateY(-180deg);
+          }
+          &--back-2 {
+            position: relative;
+            background: linear-gradient(
+              to bottom right,
+              $color-primary-dark,
+              $color-primary-light
+            );
+            height: 50rem;
+            transform: rotateY(-180deg);
+          }
+          &--back-3 {
+            position: relative;
+            background: linear-gradient(
+              to bottom right,
+              $color-tour-blue-dark,
+              $color-tour-blue-light
+            );
+            height: 50rem;
+            transform: rotateY(-180deg);
+          }
+
+          .buy {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            &-button {
+              cursor: pointer;
+              padding: 1.5rem 2.8rem;
+              border: none;
+              outline: none;
+              border-radius: 2.2rem;
+              font-size: $regular-font-size + 0.1rem;
+            }
+          }
+        }
+
+        &:hover .card-side--front {
+          transform: rotateY(180deg);
+        }
+        &:hover .card-side--back {
+          transform: rotateY(0deg);
+        }
+        &:hover .card-side--front-2 {
+          transform: rotateY(180deg);
+        }
+        &:hover .card-side--back-2 {
+          transform: rotateY(0deg);
+        }
+        &:hover .card-side--front-3 {
+          transform: rotateY(180deg);
+        }
+        &:hover .card-side--back-3 {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: $grid-gutter-horizontal;
+    }
+  }
+}

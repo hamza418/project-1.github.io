@@ -1,0 +1,23 @@
+.about-2 {
+  max-width: $grid-max-width;
+  background-color: $color-grey;
+  margin: 0 auto;
+  color: $color-dark-grey;
+  @include clearfix;
+  //   margin-bottom: $grid-gutter-vertical;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-gutter-vertical;
+  }
+
+  .about-2-text-left {
+    width: calc((100% - #{$grid-gutter-horizontal}) / 2);
+    // background-color: $color-primary-light;
+
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-gutter-horizontal;
+    }
+  }
+}

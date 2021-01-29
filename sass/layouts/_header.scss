@@ -1,0 +1,23 @@
+.header {
+  background: linear-gradient(
+      to bottom right,
+      rgba(4, 68, 4, 0.945),
+      rgba(4, 179, 33, 0.918)
+    ),
+    url("../img/tour3.jpg");
+  background-size: cover;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-position: center;
+  position: relative;
+  &-logo--box {
+    position: absolute;
+    top: 2.7rem;
+    left: 2.9rem;
+  }
+  &-logo {
+    height: 7.5rem;
+    /* filter: invert(100%); */
+    border-radius: 4rem;
+  }
+}
